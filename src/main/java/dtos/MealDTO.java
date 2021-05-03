@@ -2,7 +2,9 @@ package dtos;
 
 import entities.meal.Category;
 import entities.meal.Meal;
+import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class MealDTO {
 
@@ -10,6 +12,12 @@ public class MealDTO {
     private String name;
     private double price;
     private Category category;
+
+    public static List<MealDTO> getFromMealList(List<Meal> meals) {
+        return meals.stream()
+            .map(meal -> new MealDTO(meal))
+            .collect(Collectors.toList());
+    }
 
     public MealDTO(String name, double price, Category category) {
         this.name = name;

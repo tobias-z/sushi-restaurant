@@ -36,13 +36,17 @@ public class Meal implements Serializable {
     @Enumerated(EnumType.STRING)
     private Category category;
 
+    @Column(name = "description")
+    private String description;
+
     public Meal() {
     }
 
-    public Meal(String name, double price, Category category) {
+    public Meal(String name, double price, Category category, String description) {
         this.name = name;
         this.price = price;
         this.category = category;
+        this.description = description;
     }
 
     public void setId(Integer id) {
@@ -77,6 +81,14 @@ public class Meal implements Serializable {
         this.category = category;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     @Override
     public String toString() {
         return "Meal{" +
@@ -84,6 +96,7 @@ public class Meal implements Serializable {
             ", name='" + name + '\'' +
             ", price=" + price +
             ", category=" + category +
+            ", description='" + description + '\'' +
             '}';
     }
 }

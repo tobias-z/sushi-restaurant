@@ -12,6 +12,7 @@ public class MealDTO {
     private String name;
     private double price;
     private Category category;
+    private String description;
 
     public static List<MealDTO> getFromMealList(List<Meal> meals) {
         return meals.stream()
@@ -19,10 +20,11 @@ public class MealDTO {
             .collect(Collectors.toList());
     }
 
-    public MealDTO(String name, double price, Category category) {
+    public MealDTO(String name, double price, Category category, String description) {
         this.name = name;
         this.price = price;
         this.category = category;
+        this.description = description;
     }
 
     public MealDTO(Meal meal) {
@@ -30,6 +32,7 @@ public class MealDTO {
         this.name = meal.getName();
         this.price = meal.getPrice();
         this.category = meal.getCategory();
+        this.description = meal.getDescription();
     }
 
     public Integer getId() {
@@ -64,6 +67,14 @@ public class MealDTO {
         this.category = category;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     @Override
     public String toString() {
         return "MealDTO{" +
@@ -71,6 +82,7 @@ public class MealDTO {
             ", name='" + name + '\'' +
             ", price=" + price +
             ", category=" + category +
+            ", description='" + description + '\'' +
             '}';
     }
 

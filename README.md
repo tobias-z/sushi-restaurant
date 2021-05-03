@@ -1,5 +1,4 @@
-[![Build Status](https://travis-ci.com/Peter-Rambeck/CA3BackEnd.svg?branch=master)](https://travis-ci.com/Peter-Rambeck/CA3BackEnd)
-
+[![Build Status](https://travis-ci.com/tobias-z/sushi-restaurant.svg?branch=main)](https://travis-ci.com/tobias-z/sushi-restaurant)
 # InSession startcode
 
 ## Team

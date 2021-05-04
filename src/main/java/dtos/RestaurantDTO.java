@@ -6,15 +6,22 @@ import java.util.Objects;
 public class RestaurantDTO {
 
     private final String name;
+    private final String description;
     private List<MealDTO> meals;
 
     public RestaurantDTO(List<MealDTO> meals) {
         this.name = "Sushi Lovers";
+        this.description = "Sushi house with amazing sushi."
+            + " We have some of the best sushi in the business!";
         this.meals = meals;
     }
 
     public String getName() {
         return name;
+    }
+
+    public String getDescription() {
+        return description;
     }
 
     public List<MealDTO> getMeals() {

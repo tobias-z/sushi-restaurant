@@ -30,13 +30,13 @@ public class MealResource extends Provider {
     }
 
     @Override
-    public Response getById(int id) {
+    public Response create(String jsonBody) {
         //TODO (tz): implement this!
         throw new UnsupportedOperationException("Not yet implemented!");
     }
 
     @Override
-    public Response create(String jsonBody) {
+    public Response getById(int id) {
         //TODO (tz): implement this!
         throw new UnsupportedOperationException("Not yet implemented!");
     }
